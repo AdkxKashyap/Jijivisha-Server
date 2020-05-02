@@ -5,7 +5,6 @@ from flask_restful import Resource, Api
 from Services import GetCOVIDdata
 from Services.GetLatestAggCovidData import RetriveLatestAggData
 from Services.GetAllAggData import RetriveAggData
-
 from Services.GetAllIndiaData import RetriveIndiaData
 from Services.GetIndiaAggData import RetriveAggIndiaData
 from Services.GetLatesNews import  RetriveLatestNews
