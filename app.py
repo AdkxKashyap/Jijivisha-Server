@@ -10,17 +10,18 @@ from Services.GetAllIndiaData import RetriveIndiaData
 from Services.GetIndiaAggData import RetriveAggIndiaData
 from Services.GetLatesNews import  RetriveLatestNews
 from Services.GetMythBusters import  RetriveMythBusters
-
+import os
 import json
 #provides a wrapper function around json.dumps to remove typeerror
 #see https://stackoverflow.com/questions/16586180/typeerror-objectid-is-not-json-serializable
 from bson.json_util import dumps
 from db import mongo
 
-from pathlib import Path
 # creating the flask app 
 app = Flask(__name__) 
 CORS(app)
+port=int(os.getenv("PORT")) 
+print(port)
 # creating an API object 
 api = Api(app) 
 #loading .env file for production
@@ -87,7 +88,7 @@ class GetAllAggIndiaData(Resource):
                     list_.append(data)
                 return Response(dumps(list_),status=200,mimetype='application/json')
             except Exception as err:
-                return Response(dumps(list_),status=200,mimetype='application/json')
+                return Response(dumps(err),status=200,mimetype='application/json')
           
         
     
@@ -137,5 +138,5 @@ api.add_resource(GetMythBusters,'/Jijivisha/v1.0/GetMythBusters')
 if __name__ == '__main__':  
    
    
-    app.run(debug = True,host='0.0.0.0',port=5001) 
+    app.run(debug = True,host='0.0.0.0',port=port) 
    
