@@ -1,4 +1,5 @@
 #imports
+import settings
 from flask import Flask, jsonify, request,Response
 from flask_cors import CORS
 from flask_restful import Resource, Api
@@ -15,11 +16,16 @@ import json
 #see https://stackoverflow.com/questions/16586180/typeerror-objectid-is-not-json-serializable
 from bson.json_util import dumps
 from db import mongo
+
+from pathlib import Path
 # creating the flask app 
 app = Flask(__name__) 
 CORS(app)
 # creating an API object 
 api = Api(app) 
+#loading .env file for production
+
+
 
 class GetLatestAggData(Resource):
     # corresponds to the GET request. 
@@ -129,4 +135,7 @@ api.add_resource(GetLatestWorldNews,'/Jijivisha/v1.0/GetAllLatestWorldNews')
 api.add_resource(GetMythBusters,'/Jijivisha/v1.0/GetMythBusters')
 # driver function 
 if __name__ == '__main__':  
+   
+   
     app.run(debug = True,host='0.0.0.0',port=5001) 
+   

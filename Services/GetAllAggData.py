@@ -1,5 +1,5 @@
-from db.mongo import client 
 
+from db.mongo import client 
 class RetriveAggData():
     def __init__(self):
        self.db=client.Jijivisha   
