@@ -1,5 +1,6 @@
 env
-.env
+# Remove it when pushin to git
+# .env
 
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python
