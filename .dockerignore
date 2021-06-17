@@ -3,3 +3,4 @@ env
 .gitignore
 debug.log
 .flaskenv
+venv
