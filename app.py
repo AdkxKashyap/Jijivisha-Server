@@ -13,7 +13,6 @@ from Services.GetMythBusters import RetriveMythBusters
 from Services.CheckLatestData import CheckLatestData
 from datetime import datetime
 import os
-import json
 import traceback
 # provides a wrapper function around json.dumps to remove typeerror
 # see https://stackoverflow.com/questions/16586180/typeerror-objectid-is-not-json-serializable
@@ -23,7 +22,7 @@ from db import mongo
 # creating the flask app
 app = Flask(__name__)
 CORS(app)
-port = int(os.getenv("PORT"))
+port = int(os.environ.get('PORT',9000))
 # print(port)
 # creating an API object
 api = Api(app)
