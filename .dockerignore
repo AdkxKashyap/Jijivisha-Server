@@ -1,6 +1,5 @@
-env
+
 .git
 .gitignore
 debug.log
-.flaskenv
 venv
