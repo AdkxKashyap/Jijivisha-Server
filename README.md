@@ -16,17 +16,19 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
+
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/AdkxKashyap/Jijivisha-Client">
+  <a href="https://github.com/AdkxKashyap/Jijivisha-Server">
     <img src="https://i.ibb.co/st6BQgK/diya-brand-img.jpg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Jijivisha</h3>
 
   <p align="center">
-     Project jijivisha is a Covid Response Application. This Project consists of a Web Crawler, Flask API, Angular Application. 
+     Project jijivisha a Covid Response Project. This Project consists of a Web Crawler, Flask API, Angular Application. 
       <ol>
     <li>
     <a href="https://github.com/AdkxKashyap/Jijivisha-WebScraping-Script">Web Crawler - This application gathers data from various sources on the internet. It gathers data like total cases, total recovered, latest news etc.</a>
@@ -35,7 +37,7 @@
      <a href="https://github.com/AdkxKashyap/Jijivisha-Server">FlaskAPI - This API powers the angular application. It fetches the data from mongoDB, processes the data and sends it to client.</a>
     </li>
     <li>
-    <a href="https://github.com/AdkxKashyap/Jijivisha-Client">Angular App - This is the main app whichs gets the data from api and displays to the user.</a> 
+    <a href="https://github.com/AdkxKashyap/Jijivisha-Server">Angular App - This is the main app whichs gets the data from api and displays to the user.</a> 
     </li>
   </ol>  
     <br />
@@ -75,7 +77,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://jijivisha.herokuapp.com)
 
-<!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `AdkxKashyap`, `Jijivisha-Client`, `twitter_handle`, `adkx1010`, `gmail`, `akashdeepk619`, `jijivisha`, `jijivisha is social media web appliction where uses can share posts , make new friends , share their ideas and many more things.` -->
+<!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `AdkxKashyap`, `Jijivisha-Server`, `twitter_handle`, `adkx1010`, `gmail`, `akashdeepk619`, `jijivisha`, `jijivisha is social media web appliction where uses can share posts , make new friends , share their ideas and many more things.` -->
 
 
 
@@ -92,6 +94,7 @@
 - [Heroku]
 
 
+
 <!-- GETTING STARTED -->
 
 ## Getting Started
@@ -102,38 +105,40 @@ To get a local copy up and running follow these simple example steps.
 
 This is an example of how to list things you need to use the software and how to install them.
 
-- npm
+- pip
   ```sh
-  npm install npm@latest -g
+  python get-pip.py
   ```
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/AdkxKashyap/Jijivisha-Client.git
+   git clone https://github.com/AdkxKashyap/Jijivisha-Server.git
    ```
-2. Install NPM packages
+2. Install  packages
    ```sh
-   npm install
+   pip install -r requirements.txt
    ```
-3. Enter your API in `src/environments/environvent.ts`.
-   Note - Do not change Port
+4. Enter your KEYS in `config/env.env`.
    ```js
-    GOOGLE_API_KEY = YOUR GOOGLE API KEY. PLEASE CHECK GOOGLE DEV CONSOLE
+    MONGO_URL= YOUR MONGODB URL
    ```
-4. Start Server
-   ```sh
-   ng s
+5. Start Server
+    ```sh
+   python app.py
    ```
+
 
 <!-- USAGE EXAMPLES -->
 
 <!-- ## Usage
-
-
-
 _For more information, please refer to the [Documentation](https://documenter.getpostman.com/view/3712938/UVeCQTf6)_ -->
+
+
+
+
+
 <!-- CONTRIBUTING -->
 
 ## Contributing
@@ -149,15 +154,18 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
+
 
 <!-- CONTACT -->
 
 ## Contact
 
-[@linkedin](https://linkedin.com/in/adkx1010) . akashdeepk619@gmail.com
+[@linkedin](https://linkedin.com/in/adkx1010) . akashdeepk619@gmail.com 
 
-Project Link: [https://github.com/AdkxKashyap/Jijivisha-Client](https://github.com/AdkxKashyap/Jijivisha-Client)
+Project Link: [https://github.com/AdkxKashyap/Jijivisha-Server](https://github.com/AdkxKashyap/Jijivisha-Server)
+
+
 
 
 
